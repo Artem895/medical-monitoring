@@ -14,7 +14,7 @@ public class RabbitConfig {
     public static final String ALERT_QUEUE = "alert queue";
     public static final String DAILY_QUEUE = "daily queue";
     public static final String ERROR_QUEUE = "error queue";
-    private static final String HOST = "localhost";
+    private static final String HOST = "rabbit";
 
     @Bean
     public ConnectionFactory connectionFactory() {
