@@ -11,6 +11,4 @@ public class Message {
 
     @JsonProperty("Message")
     private String message;
-
-
 }

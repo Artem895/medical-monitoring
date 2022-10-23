@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"liga.medical.medicalmonitoring"})
+@ComponentScan("liga.medical.medicalmonitoring")
 public class MedicalMonitoringApplication {
 
-    public static void main(String[] args) {
+    public static void main(String... args) {
         SpringApplication.run(MedicalMonitoringApplication.class, args);
     }
 

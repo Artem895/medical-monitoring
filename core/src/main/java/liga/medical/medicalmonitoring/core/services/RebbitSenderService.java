@@ -22,17 +22,17 @@ public class RebbitSenderService {
 
     public void sendmessages(String message) throws JsonProcessingException {
 
-        Message message_new=objectMapper.readValue(message,Message.class);
+        Message messagenew = objectMapper.readValue(message, Message.class);
 
-        switch (message_new.getMessageType()){
+        switch (messagenew.getMessageType()) {
             case DAILY:
-                amqpTemplate.convertAndSend(RabbitConfig.DAILY_QUEUE,message);
+                amqpTemplate.convertAndSend(RabbitConfig.DAILY_QUEUE, message);
                 break;
             case ALERT:
-                amqpTemplate.convertAndSend(RabbitConfig.ALERT_QUEUE,message);
+                amqpTemplate.convertAndSend(RabbitConfig.ALERT_QUEUE, message);
                 break;
             case ERROR:
-                amqpTemplate.convertAndSend(RabbitConfig.ERROR_QUEUE,message);
+                amqpTemplate.convertAndSend(RabbitConfig.ERROR_QUEUE, message);
                 break;
             default:
                 System.out.println("Нет таких сообщений");

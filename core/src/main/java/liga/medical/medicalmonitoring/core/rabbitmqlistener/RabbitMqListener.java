@@ -7,7 +7,6 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-
 @EnableRabbit
 @Component
 public class RabbitMqListener {
@@ -20,11 +19,10 @@ public class RabbitMqListener {
     }
 
     @RabbitListener(queues = "common_monitoring")
-    public void listencommonqueue(String message)  {
+    public void listencommonqueue(String message) {
         try {
             rebbitSenderService.sendmessages(message);
-        }
-        catch (JsonProcessingException e){
+        } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
     }
