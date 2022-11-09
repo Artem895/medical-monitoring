@@ -35,6 +35,11 @@
             <artifactId>common-services</artifactId>
         </dependency>
         <dependency>
+            <!--        Эта зависимость тянет компоненты спринга их тоже нужно сканировать-->
+            <groupId>liga.medical</groupId>
+            <artifactId>common-core</artifactId>
+        </dependency>
+        <dependency>
             <groupId>liga.medical</groupId>
             <artifactId>monitoring-core-api</artifactId>
         </dependency>
